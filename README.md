@@ -1,5 +1,5 @@
-Lope Anime Brok
-
+Belom Responsive sihhhhh. Moga Tugas Kuliah dimudahkan biar Bisa Buat
+Amin
 ## Project Setup
 
 ```sh
