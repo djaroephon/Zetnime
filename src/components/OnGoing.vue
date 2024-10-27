@@ -1,16 +1,25 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import largeImg from '@/assets/Images/on-going/large.jpg';
+import acroImg from '@/assets/Images/on-going/acro.jpg';
+import rekisihi from '@/assets/Images/on-going/rekishi.jpg';
+import amagamiImg from '@/assets/Images/on-going/amagami.jpg';
+import yarinaoshiImg from '@/assets/Images/on-going/yarinaoshi.jpg';
+import seireiImg from '@/assets/Images/on-going/seirei.jpg';
+import loveliveImg from '@/assets/Images/on-going/lovelive.jpg';
+import saoImg from '@/assets/Images/on-going/sao.jpg';
+import hoshifuruImg from '@/assets/Images/on-going/hoshifuru.jpg';
 
 const onGoing = ref([
-  { judul: 'Re:Zero kara Hajimeru Isekai Seikatsu', img: 'src/assets/Images/on-going/large.jpg' },
-  { judul: 'Acro Trip', img: '../assets/Images/on-going/acro.jpg' },
-  { judul: 'Rekishi Ni Nokoru Akujo Ni Naru Zo ', img: '/src/assets/Images/on-going/rekishi.jpg' },
-  { judul: 'Amagami-san Chi No Enmusubi', img: '/src/assets/Images/on-going/amagami.jpg' },
-  { judul: 'Yarinaoshi Reijou wa Ryuutei Heika wo Kouryakuchuui', img: '/src/assets/Images/on-going/yarinaoshi.jpg' },
-  { judul: 'Seirei Gensouki Season 2', img: '/src/assets/Images/on-going/seirei.jpg' },
-  { judul: 'Love Live Superstar!!', img: '/src/assets/Images/on-going/lovelive.jpg' },
-  { judul: 'Sword Art Online Alternative: Gun Gale Online Season 2', img:'/src/assets/Images/on-going/sao.jpg'},
-  { judul:'Hoshifuru Oukoku no Nina', img:'/src/assets/Images/on-going/hoshifuru.jpg'}
+  { judul: 'Re:Zero kara Hajimeru Isekai Seikatsu', img: largeImg },
+  { judul: 'Acro Trip', img: acroImg },
+  { judul: 'Rekishi Ni Nokoru Akujo Ni Naru Zo', img: rekisihi },
+  { judul: 'Amagami-san Chi No Enmusubi', img: amagamiImg },
+  { judul: 'Yarinaoshi Reijou wa Ryuutei Heika wo Kouryakuchuui', img: yarinaoshiImg },
+  { judul: 'Seirei Gensouki Season 2', img: seireiImg },
+  { judul: 'Love Live Superstar!!', img: loveliveImg },
+  { judul: 'Sword Art Online Alternative: Gun Gale Online Season 2', img: saoImg },
+  { judul: 'Hoshifuru Oukoku no Nina', img: hoshifuruImg }
 ]);
 </script>
 
