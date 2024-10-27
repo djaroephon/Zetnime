@@ -22,6 +22,8 @@ const Genre = ref([
 </script>
 
 <template>
+  <section id="genre">
+    <br>
     <div class="p-6 sm:ml-4 transition-all duration-300">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div 
@@ -30,16 +32,14 @@ const Genre = ref([
           class="genre-card relative flex flex-col justify-end max-w-sm p-6 border border-gray-200 rounded-lg shadow-lg dark:border-gray-700 transition-transform duration-300 transform hover:scale-105 overflow-hidden"
           :style="{ backgroundImage: 'url(' + genre.img + ')', backgroundSize: 'cover', backgroundPosition: 'center' }"
         >
-          <!-- Overlay gelap -->
           <div class="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300"></div>
-  
-          <!-- Teks genre, tampil di tengah saat di-hover -->
           <div class="relative z-10 opacity-0 hover:opacity-100 transition-opacity duration-300 text-center flex items-center justify-center pb-10">
             <h5 class="text-xl font-semibold tracking-tight text-white">{{ genre.genre }}</h5>
           </div>
         </div>
       </div>
     </div>
+  </section>
   </template>
   
   <style scoped>
@@ -58,7 +58,7 @@ const Genre = ref([
     transition: opacity 0.3s;
   }
   
-  .genre-card .relative {
+  .genre-card .relative { 
     transition: opacity 0.3s;
   }
   </style>
