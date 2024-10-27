@@ -2,8 +2,8 @@
 import { ref, onMounted } from 'vue';
 
 const onGoing = ref([
-  { judul: 'Re:Zero kara Hajimeru Isekai Seikatsu', img: '/src/assets/Images/on-going/large.jpg' },
-  { judul: 'Acro Trip', img: '/src/assets/Images/on-going/acro.jpg' },
+  { judul: 'Re:Zero kara Hajimeru Isekai Seikatsu', img: 'src/assets/Images/on-going/large.jpg' },
+  { judul: 'Acro Trip', img: 'src/assets/Images/on-going/acro.jpg' },
   { judul: 'Rekishi Ni Nokoru Akujo Ni Naru Zo ', img: '/src/assets/Images/on-going/rekishi.jpg' },
   { judul: 'Amagami-san Chi No Enmusubi', img: '/src/assets/Images/on-going/amagami.jpg' },
   { judul: 'Yarinaoshi Reijou wa Ryuutei Heika wo Kouryakuchuui', img: '/src/assets/Images/on-going/yarinaoshi.jpg' },
