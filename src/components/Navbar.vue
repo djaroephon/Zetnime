@@ -1,5 +1,7 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+
+const isOpen = ref(false);
 
 const smoothScrollTo = (targetId) => {
   const targetElement = document.getElementById(targetId);
@@ -8,11 +10,15 @@ const smoothScrollTo = (targetId) => {
   }
 };
 
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+
 onMounted(() => {
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); 
+      e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
       smoothScrollTo(targetId);
     });
@@ -35,8 +41,9 @@ onMounted(() => {
         <button 
           type="button" 
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          @click="toggleMenu"
           aria-controls="navbar-sticky" 
-          aria-expanded="false">
+          :aria-expanded="isOpen.toString()">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -44,7 +51,7 @@ onMounted(() => {
         </button>
       </div>
 
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <div :class="{'hidden': !isOpen, 'flex': isOpen}" class="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
         <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li class="relative group">
             <a href="#home" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700">Home</a>
@@ -65,7 +72,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
 a {
   transition: color 0.3s ease, background-color 0.3s ease; 
 }
@@ -73,11 +79,4 @@ a {
 button {
   transition: background-color 0.3s ease; 
 }
-
-.group:hover .absolute {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 </style>
